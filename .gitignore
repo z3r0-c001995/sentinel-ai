@@ -1,0 +1,25 @@
+# Rust
+/agent/target/
+Cargo.lock
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# Databases
+*.db
+*.sqlite3
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

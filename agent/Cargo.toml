@@ -1,0 +1,19 @@
+[package]
+name = "sentinel-agent"
+version = "0.1.0"
+edition = "2021"
+description = "Sentinel AI lightweight endpoint monitoring agent (MVP)"
+
+[dependencies]
+sysinfo = "0.32"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+
+[profile.release]
+opt-level = "z"   # optimize for small binary size — agent should be lightweight
+lto = true
